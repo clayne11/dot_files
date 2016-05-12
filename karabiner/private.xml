@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<root>
+	<devicevendordef>
+		<vendorname>DAS</vendorname>
+		<vendorid>0x04d9</vendorid>
+	</devicevendordef>
+
+	<deviceproductdef>
+		<productname>DAS_KEYBOARD</productname>
+		<productid>0x2013</productid>
+	</deviceproductdef>
+
+	<devicevendordef>
+		<vendorname>VARMILLO</vendorname>
+		<vendorid>0x1915</vendorid>
+	</devicevendordef>
+
+	<item>
+	    <name>Swap right command and F11</name>
+	    <identifier>RightCommandF11Swap</identifier>
+        <device_not>DeviceVendor::DAS, DeviceVendor::VARMILLO</device_not>
+	    <autogen>
+	    	__KeyToKey__ 
+	    	KeyCode::COMMAND_R, 
+	    	KeyCode::F11
+	    </autogen>
+	</item>
+	<item>
+	    <name>Swap right option and F10</name>
+	    <identifier>RightOptionF10Swap</identifier>
+        <device_not>DeviceVendor::DAS, DeviceVendor::VARMILLO</device_not>
+	    <autogen>
+	    	__KeyToKey__ 
+	    	KeyCode::OPTION_R, 
+	    	KeyCode::F10
+	    </autogen>
+	</item>
+
+	<!-- Varmillo swap cmd + option -->
+	<item>
+	    <name>Swap cmd and option</name>
+	    <identifier>SwapCmdAndOption</identifier>
+        <device_only>DeviceVendor::VARMILLO</device_only>
+       	<autogen>
+	    	__KeyToKey__ 
+	    	KeyCode::OPTION_L, 
+	    	KeyCode::COMMAND_L
+	    </autogen>
+	    <autogen>
+	    	__KeyToKey__ 
+	    	KeyCode::COMMAND_L,
+	    	KeyCode::OPTION_L,
+	    </autogen>
+	    <autogen>
+	    	__KeyToKey__ 
+	    	KeyCode::OPTION_R, 
+	    	KeyCode::COMMAND_R
+	    </autogen>
+	    <autogen>
+	    	__KeyToKey__ 
+	    	KeyCode::COMMAND_R,
+	    	KeyCode::OPTION_R
+	    </autogen>
+	</item>
+</root>
